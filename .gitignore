@@ -5,3 +5,6 @@ dist
 .DS_Store
 client/dist
 server/dist
+.vercel
+
+.vercel

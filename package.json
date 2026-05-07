@@ -2,7 +2,12 @@
   "name": "rag-pipeline-visualizer",
   "private": true,
   "version": "1.0.0",
+  "type": "module",
   "description": "RAG Pipeline Visualizer — full-stack MVP",
+  "workspaces": [
+    "client",
+    "server"
+  ],
   "scripts": {
     "dev": "concurrently -n server,client -c cyan,magenta \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
     "build": "npm run build --prefix client && npm run build --prefix server",

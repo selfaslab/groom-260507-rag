@@ -112,7 +112,8 @@ ragRouter.post("/search", async (req, res) => {
   }
 });
 
-ragRouter.post("/pdf-text", upload.single("file"), async (req, res) => {
+/** Multer 미들웨어와 Express 타입 정의 조합 시 충돌 방지 */
+ragRouter.post("/pdf-text", upload.single("file") as any, async (req, res) => {
   try {
     if (!req.file) {
       return res.status(400).json({ error: "PDF file is required" });

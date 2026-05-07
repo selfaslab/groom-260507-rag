@@ -75,3 +75,15 @@ node server/dist/index.js
 ```
 
 프로덕션에서는 클라이언트의 `VITE_API_URL`을 실제 배포 도메인에 맞춥니다.
+
+## Vercel 배포
+
+리포지토리 루트에 `vercel.json`과 `api/index.ts`가 있어, **프런트(Vite 빌드) + Express API(서버리스)** 형태로 한 프로젝트에 올릴 수 있습니다.
+
+- **프로덕션 빌드**: `client/dist` 출력, `/api/*`는 `api/index.ts`의 Express 앱으로 전달됩니다.
+- **브라우저 호출 주소**: `client/.env.production`에서 `VITE_API_URL`을 비워 두어 같은 호스트의 `/api`를 쓰도록 했습니다.
+- **환경 변수 (Vercel 대시보드 → Project → Settings → Environment Variables)**  
+  - `OPENAI_API_KEY`: 필수 (임베딩·검색)
+- 로컬에서 배포하려면: `npx vercel deploy --prod` (또는 GitHub 연동 후 자동 배포)
+
+GitHub와 Vercel 계정을 연결하지 않으면 CLI에서 “Login Connection” 오류가 날 수 있습니다. [Vercel 계정에 GitHub 연결](https://vercel.com/docs/accounts/create-an-account#login-methods-and-connections) 후 다시 연동하세요.
