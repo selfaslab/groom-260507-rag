@@ -59,6 +59,9 @@ npm run dev
 
 클라이언트 기본 포트는 `5173`입니다.
 
+<img width="870" height="871" alt="rag2" src="https://github.com/user-attachments/assets/1e3d2c60-72c4-4686-8541-0804d01f47d6" />
+
+
 ## API
 
 | 메서드 | 경로 | 설명 |
@@ -69,7 +72,6 @@ npm run dev
 | `POST` | `/api/pdf-text` | `multipart/form-data` 파일 필드 `file` → 텍스트 |
 | `GET` | `/api/health` | 서버 상태 및 키 설정 여부 |
 
-<img width="870" height="871" alt="rag2" src="https://github.com/user-attachments/assets/1e3d2c60-72c4-4686-8541-0804d01f47d6" />
 
 ## 프로덕션 빌드
 
