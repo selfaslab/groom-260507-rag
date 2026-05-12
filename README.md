@@ -1,6 +1,9 @@
+
 # RAG Pipeline Visualizer
 
 교육/포트폴리오용 RAG 단계별 시각화 웹앱입니다. 문서 입력 → 단어 단위 청킹 → OpenAI 임베딩 → 코사인 유사도 Top‑K 검색 → 프롬프트 구성까지 한 화면에서 확인합니다.
+
+<img width="967" height="871" alt="rag1" src="https://github.com/user-attachments/assets/a9d1280b-7897-43b2-8def-4c959e3f0638" />
 
 ## 스택
 
@@ -65,6 +68,8 @@ npm run dev
 | `POST` | `/api/search` | `{ query, chunks, embeddings, topK? }` → Top‑K 결과 |
 | `POST` | `/api/pdf-text` | `multipart/form-data` 파일 필드 `file` → 텍스트 |
 | `GET` | `/api/health` | 서버 상태 및 키 설정 여부 |
+
+<img width="870" height="871" alt="rag2" src="https://github.com/user-attachments/assets/1e3d2c60-72c4-4686-8541-0804d01f47d6" />
 
 ## 프로덕션 빌드
 
